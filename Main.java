@@ -22,6 +22,10 @@ public class Main {
 
             var charList = new FileManage(inp);
             String result = charList.countChars();
+            if (result.isEmpty()) {
+                System.out.println("File is empty!");
+                return;
+            }
             charList.writeFile(outp, result);
             System.out.println("Result was written to a file and could be found at this path: " + outp);
         } catch (IOException err) {
